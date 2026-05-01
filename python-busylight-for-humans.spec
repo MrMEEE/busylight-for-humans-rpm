@@ -32,7 +32,7 @@ Summary:        %{summary}
 
 
 %prep
-%autosetup -p0 -n busylight_for_humans-%{version}
+%autosetup -p1 -n busylight_for_humans-%{version}
 
 
 %generate_buildrequires
