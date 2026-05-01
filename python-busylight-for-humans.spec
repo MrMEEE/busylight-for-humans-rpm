@@ -9,6 +9,7 @@ Summary:        Control USB connected LED lights, like a human.
 License:        Apache-2.0
 URL:            ...
 Source:         %{pypi_source busylight_for_humans}
+Patch0:		uvbuild2setuptools.patch
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
