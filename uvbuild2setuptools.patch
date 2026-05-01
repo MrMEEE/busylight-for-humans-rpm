@@ -1,6 +1,15 @@
-kdiff -uNr busylight_for_humans-1.0.0/pyproject.toml busylight_for_humans-1.0.0-fixed/pyproject.toml
 --- busylight_for_humans-1.0.0/pyproject.toml   1970-01-01 01:00:00.000000000 +0100
 +++ busylight_for_humans-1.0.0-fixed/pyproject.toml     2026-05-01 14:37:09.468525851 +0200
+@@ -3,7 +3,7 @@
+ version = "1.0.0"
+ description = "Control USB connected LED lights, like a human."
+ readme = "README.md"
+-license = "Apache-2.0"
++license = { text = "Apache-2.0" }
+ authors = [
+     { name = "JnyJny", email = "erik.oshaughnessy@gmail.com" }
+ ]
+
 @@ -52,11 +52,11 @@
  ]
  
@@ -17,14 +26,4 @@ kdiff -uNr busylight_for_humans-1.0.0/pyproject.toml busylight_for_humans-1.0.0-
  
  [tool.uv.sources]
  busylight-core = { workspace = true }
-
-@@ -3,7 +3,7 @@
- version = "1.0.0"
- description = "Control USB connected LED lights, like a human."
- readme = "README.md"
--license = "Apache-2.0"
-+license = { text = "Apache-2.0" }
- authors = [
-     { name = "JnyJny", email = "erik.oshaughnessy@gmail.com" }
- ]
 
