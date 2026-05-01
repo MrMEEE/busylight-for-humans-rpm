@@ -1,0 +1,37 @@
+diff -uNr busylight-orig/packages/busylight/pyproject.toml busylight/packages/busylight/pyproject.toml
+--- busylight-orig/packages/busylight/pyproject.toml    2026-05-01 13:22:56.165430255 +0200
++++ busylight/packages/busylight/pyproject.toml 2026-05-01 13:21:43.256649779 +0200
+@@ -52,11 +52,11 @@
+ ]
+ 
+ [build-system]
+-requires = ["uv_build"]
+-build-backend = "uv_build"
++requires = ["setuptools>=61"]
++build-backend = "setuptools.build_meta"
+ 
+-[tool.uv.build-backend]
+-module-name = "busylight"
++[tool.setuptools.packages.find]
++where = ["src"]
+ 
+ [tool.uv.sources]
+ busylight-core = { workspace = true }
+diff -uNr busylight-orig/packages/busylight-core/pyproject.toml busylight/packages/busylight-core/pyproject.toml
+--- busylight-orig/packages/busylight-core/pyproject.toml       2026-05-01 13:22:56.151430297 +0200
++++ busylight/packages/busylight-core/pyproject.toml    2026-05-01 13:21:43.251649794 +0200
+@@ -32,8 +32,11 @@
+ Source = "https://github.com/JnyJny/busylight_core"
+ 
+ [build-system]
+-requires = ["uv_build"]
+-build-backend = "uv_build"
++requires = ["setuptools>=61"]
++build-backend = "setuptools.build_meta"
++
++[tool.setuptools.packages.find]
++where = ["src"]
+ 
+ [dependency-groups]
+ dev = [
+
