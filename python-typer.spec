@@ -10,6 +10,7 @@ Patch0:         pdm2setuptools-typer.patch
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:  python3-annotated-doc
+BuildRequires:  python3-click python3-shellingham python3-rich
 
 # Runtime dependencies not yet available in RHEL 10 that may need separate specs:
 #   python3dist(annotated-doc) >= 0.0.2  (new dep, check availability)
