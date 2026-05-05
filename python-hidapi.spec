@@ -11,6 +11,7 @@ BuildRequires:  python3-devel
 BuildRequires:  hidapi-devel
 BuildRequires:  gcc
 BuildRequires:  libusb1-devel libusb1
+BuildRequires:	systemd-devel
 
 %global _description %{expand:
 Python bindings for the HIDAPI C library, providing access to USB and
