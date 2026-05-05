@@ -1,0 +1,27 @@
+--- busylight_core-2.4.0/pyproject.toml
++++ busylight_core-2.4.0/pyproject.toml
+@@ -3,9 +3,8 @@
+ version = "2.4.0"
+ description = "Busylight Core Implementation for Humans, presumably like you!"
+ readme = "README.md"
+-license = "Apache-2.0"
++license = { text = "Apache-2.0" }
+ authors = [{name = "JnyJny", email = "erik.oshaughnessy@gmail.com"}]
+-repository = "https://github.com/JnyJny/busylight_core"
+ requires-python = ">=3.11,<4.0"
+ dependencies = [
+     "loguru",
+@@ -32,8 +31,11 @@
+ Source = "https://github.com/JnyJny/busylight_core"
+ 
+ [build-system]
+-requires = ["uv_build"]
+-build-backend = "uv_build"
++requires = ["setuptools>=61"]
++build-backend = "setuptools.build_meta"
++
++[tool.setuptools.packages.find]
++where = ["src"]
+ 
+ [dependency-groups]
+ dev = [
