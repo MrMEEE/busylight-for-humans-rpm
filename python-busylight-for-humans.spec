@@ -29,7 +29,7 @@ Summary:        %{summary}
 # For official Fedora packages, review which extras should be actually packaged
 # See: https://docs.fedoraproject.org/en-US/packaging-guidelines/Python/#Extras
 # Uncomment and adjust if you want to ship the web/webapi extras:
-#%pyproject_extras_subpkg -n python3-busylight-for-humans web,webapi
+#pyproject_extras_subpkg -n python3-busylight-for-humans web,webapi
 
 
 %prep
