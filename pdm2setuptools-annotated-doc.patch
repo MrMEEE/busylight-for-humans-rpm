@@ -1,0 +1,29 @@
+--- annotated_doc-0.0.4/pyproject.toml
++++ annotated_doc-0.0.4/pyproject.toml
+@@ -1,10 +1,7 @@
+ [project]
+ name = "annotated-doc"
+ dynamic = []
+-license = "MIT"
+-license-files = [
+-    "LICENSE",
+-]
++license = { text = "MIT" }
+ description = "Document parameters, class attributes, return types, and variables inline, with Annotated."
+ readme = "README.md"
+ authors = [
+@@ -46,9 +43,12 @@
+ 
+ [build-system]
+ requires = [
+-    "pdm-backend",
++    "setuptools>=61",
+ ]
+-build-backend = "pdm.backend"
++build-backend = "setuptools.build_meta"
++
++[tool.setuptools.packages.find]
++where = ["src"]
+ 
+ [tool.mypy]
+ strict = true
