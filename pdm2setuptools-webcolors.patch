@@ -1,0 +1,16 @@
+--- webcolors-25.10.0/pyproject.toml
++++ webcolors-25.10.0/pyproject.toml
+@@ -1,8 +1,11 @@
+ [build-system]
+ requires = [
+-    "pdm-backend",
++    "setuptools>=61",
+ ]
+-build-backend = "pdm.backend"
++build-backend = "setuptools.build_meta"
++
++[tool.setuptools.packages.find]
++where = ["src"]
+ 
+ [project]
+ authors = [
