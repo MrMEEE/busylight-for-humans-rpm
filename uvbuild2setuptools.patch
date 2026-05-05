@@ -1,6 +1,6 @@
---- busylight_for_humans-1.0.0/pyproject.toml   1970-01-01 01:00:00.000000000 +0100
-+++ busylight_for_humans-1.0.0-fixed/pyproject.toml     2026-05-01 14:37:09.468525851 +0200
-@@ -3,7 +3,7 @@
+--- busylight_for_humans-1.0.0/pyproject.toml
++++ busylight_for_humans-1.0.0/pyproject.toml
+@@ -3,11 +3,10 @@
  version = "1.0.0"
  description = "Control USB connected LED lights, like a human."
  readme = "README.md"
@@ -9,10 +9,21 @@
  authors = [
      { name = "JnyJny", email = "erik.oshaughnessy@gmail.com" }
  ]
-
---- busylight_for_humans-1.0.0/pyproject.toml   1970-01-01 01:00:00.000000000 +0100
-+++ busylight_for_humans-1.0.0-fixed/pyproject.toml     2026-05-01 14:37:09.468525851 +0200
-@@ -52,11 +52,11 @@
+-repository = "https://github.com/JnyJny/busylight.git"
+ requires-python = ">=3.11,<4.0"
+ dependencies = [
+     "busylight-core>=2.3.0",
+@@ -33,6 +32,9 @@
+   "Programming Language :: Python :: 3.14",  
+ ]
+ 
++[project.urls]
++Source = "https://github.com/JnyJny/busylight.git"
++
+ [project.scripts]
+ busylight = "busylight.__main__:cli"
+ busyserve = "busylight.busyserve:busyserve_cli"
+@@ -52,14 +54,12 @@
  ]
  
  [build-system]
@@ -26,7 +37,8 @@
 +[tool.setuptools.packages.find]
 +where = ["src"]
  
- [tool.uv.sources]
- busylight-core = { workspace = true }
-
-
+-[tool.uv.sources]
+-busylight-core = { workspace = true }
+ 
+ [tool.deptry]
+ known_first_party = ["busylight", "busylight_core"]
