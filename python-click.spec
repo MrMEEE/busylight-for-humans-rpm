@@ -5,10 +5,10 @@ Summary:        Composable command line interface toolkit
 License:        BSD-3-Clause
 URL:            https://pypi.org/project/click/
 Source:         %{pypi_source click}
+Patch0:         flit2setuptools-click.patch
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
-BuildRequires:  python3-flit-core
 
 %global _description %{expand:
 Click is a Python package for creating beautiful command line interfaces

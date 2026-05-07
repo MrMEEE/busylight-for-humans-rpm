@@ -1,0 +1,26 @@
+--- click-8.3.3/pyproject.toml
++++ click-8.3.3/pyproject.toml
+@@ -3,8 +3,7 @@
+ version = "8.3.3"
+ description = "Composable command line interface toolkit"
+ readme = "README.md"
+-license = "BSD-3-Clause"
+-license-files = ["LICENSE.txt"]
++license = { text = "BSD-3-Clause" }
+ maintainers = [{name = "Pallets", email = "contact@palletsprojects.com"}]
+ classifiers = [
+     "Development Status :: 5 - Production/Stable",
+@@ -63,8 +62,11 @@
+ ]
+ 
+ [build-system]
+-requires = ["flit_core>=3.11,<4"]
+-build-backend = "flit_core.buildapi"
++requires = ["setuptools>=61"]
++build-backend = "setuptools.build_meta"
++
++[tool.setuptools.packages.find]
++where = ["src"]
+ 
+ [tool.flit.module]
+ name = "click"
