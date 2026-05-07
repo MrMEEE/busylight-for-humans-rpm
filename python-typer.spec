@@ -45,6 +45,7 @@ Summary:        %{summary}
 %pyproject_check_import
 
 %files -n python3-typer -f %{pyproject_files}
+/usr/bin/typer
 
 %changelog
 %autochangelog
