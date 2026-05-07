@@ -15,6 +15,7 @@ BuildRequires:  python3-devel
 BuildRequires:	python3-fastapi
 BuildRequires:	python3-uvicorn
 
+
 %global _description %{expand:
 Control USB connected LED lights from multiple vendors with a unified
 Python interface. Supports Agile Innovative, CompuLab, EPOS, Embrava,
@@ -49,6 +50,12 @@ Summary:        %{summary}
 %install
 %pyproject_install
 %pyproject_save_files busylight
+busylight udev-rules -o 99-busylights.rules
+install -Dpm 0644 99-busylights.rules %{buildroot}%{_udevrulesdir}/99-busylights.rules
+
+
+%post -n python3-busylight-for-humans
+udevadm control --reload-rules 2>/dev/null || :
 
 
 %check
@@ -58,6 +65,8 @@ Summary:        %{summary}
 %files -n python3-busylight-for-humans -f %{pyproject_files}
 /usr/bin/busylight
 /usr/bin/busyserve
+%{_udevrulesdir}/99-busylights.rules
+
 
 %changelog
 %autochangelog
