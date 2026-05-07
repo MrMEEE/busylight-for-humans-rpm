@@ -13,6 +13,7 @@ Patch0:		uvbuild2setuptools.patch
 BuildArch:      noarch
 BuildRequires:  python3-devel
 BuildRequires:	python3-fastapi
+BuildRequires:	python3-uvicorn
 
 %global _description %{expand:
 Control USB connected LED lights from multiple vendors with a unified
