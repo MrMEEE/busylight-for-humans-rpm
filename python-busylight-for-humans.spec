@@ -56,7 +56,8 @@ Summary:        %{summary}
 
 
 %files -n python3-busylight-for-humans -f %{pyproject_files}
-
+/usr/bin/busylight
+/usr/bin/busyserve
 
 %changelog
 %autochangelog
