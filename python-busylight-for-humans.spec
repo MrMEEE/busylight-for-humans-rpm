@@ -12,6 +12,7 @@ Patch0:		uvbuild2setuptools.patch
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
+BuildRequires:  systemd-rpm-macros
 BuildRequires:	python3-fastapi
 BuildRequires:	python3-uvicorn
 
