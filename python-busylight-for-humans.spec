@@ -50,7 +50,7 @@ Summary:        %{summary}
 %install
 %pyproject_install
 %pyproject_save_files busylight
-busylight udev-rules -o 99-busylights.rules
+$BUILDROOT/usr/bin/busylight udev-rules -o 99-busylights.rules
 install -Dpm 0644 99-busylights.rules %{buildroot}%{_udevrulesdir}/99-busylights.rules
 
 
