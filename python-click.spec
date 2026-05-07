@@ -8,6 +8,7 @@ Source:         %{pypi_source click}
 
 BuildArch:      noarch
 BuildRequires:  python3-devel
+BuildRequires:  python3-flit-core
 
 %global _description %{expand:
 Click is a Python package for creating beautiful command line interfaces
